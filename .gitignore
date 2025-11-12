@@ -1,0 +1,13 @@
+# Environnement virtuel
+venv/
+
+# Fichiers compilés
+*.pyc
+__pycache__/
+
+# Fichiers lourds
+*.dll
+
+# Logs et autres
+*.log
+.env
