@@ -6,3 +6,7 @@ passlib[bcrypt]
 python-jose[cryptography]
 python-dotenv
 pydantic[email]
+transformers>=4.35.0
+pytest>=9.0.0
+langdetect
+scikit-learn

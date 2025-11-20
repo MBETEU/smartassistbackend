@@ -7,7 +7,7 @@ from app.schemas.note_schemas import NoteCreate, NoteOut, NoteUpdate
 from app.dependencies import get_current_user
 from app.services.ai_service import generate_summary, generate_tags
 
-router = APIRouter(prefix="/api/notes", tags=["Notes"])
+router = APIRouter(tags=["Notes"])
 
 def enrich_note_with_ai(note_id: int, db: Session):
     """
