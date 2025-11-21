@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.db.database import Base, engine
 from app.routers import auth, notes, categories
+from app.routers import dashboard
 
 app = FastAPI(title="SmartAssist Backend")
 
@@ -26,4 +27,4 @@ Base.metadata.create_all(bind=engine)
 app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
 app.include_router(categories.router, prefix="/api/categories", tags=["Categories"])
 app.include_router(notes.router, prefix="/api/notes", tags=["Notes"])
-
+app.include_router(dashboard.router)
